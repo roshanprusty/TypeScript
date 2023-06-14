@@ -8,6 +8,12 @@ console.log(greetings);
 let userID= 123.6; //you can avoid writing :Data type ---bcz typescript is smart enough that automatically it can find.
 // userID. //here after writing the userID. the mathematical related function displays
 
-//boolean
-let isLoggedIn: boolean=false;
+// let temp; //when you hover this it will show any because it totally depend on the function return which is not good way. If we want string then any devloper can come and can do mesh on this. Here in this type of scenario we should use this  -->
+let temp: string;
+function TempValue(){
+    return "HELLO";
+}
+temp = TempValue(); 
+
+console.log(temp);
 export{}
