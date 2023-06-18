@@ -22,8 +22,9 @@ getDbId("RN");
 
 const data: number[] =[1,2,3];
 const data2: string[] =["4","5"];
-const data3: (number | string)[] =[1,2,3,"5"];
-data3.forEach((item)=>{
+const data3: number[] | string[] =[1,2,3, 4];
+const data4: (number | string)[] =[1,2,3,"5"];
+data4.forEach((item)=>{
     console.log(typeof item);
 })
 
