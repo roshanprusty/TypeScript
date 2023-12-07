@@ -1,0 +1,21 @@
+version: '3'
+services:
+  postgres:
+    image: postgres:alpine
+    container_name: pix_reaction_db
+    environment:
+      POSTGRES_USER: pix_user
+      POSTGRES_PASSWORD: pixservice123
+      POSTGRES_DB: pix_reaction_db
+    volumes:
+      - /data/pix_reaction_db:/var/lib/postgresql/data
+    networks:
+      - overlay
+    ports:
+      - "5430:5432"  # Changed the port mapping to use the default PostgreSQL port
+    command: -p 5432
+volumes:
+  postgres-db:
+
+networks:
+  overlay: cls
